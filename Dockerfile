@@ -8,8 +8,6 @@ RUN apt-get update; apt install -y curl python-is-python3 pkg-config build-essen
     /tmp/node-build-master/bin/node-build "${NODE_VERSION}" /usr/local/node && \
 rm -rf /tmp/node-build-master
 
-RUN apt-get update; apt install -y curl
-
 RUN mkdir /app
 WORKDIR /app
 
@@ -19,6 +17,8 @@ RUN npm install && npm run build
 
 
 FROM debian:bullseye-slim
+
+RUN apt-get update; apt install -y curl
 
 LABEL fly_launch_runtime="nodejs"
 
