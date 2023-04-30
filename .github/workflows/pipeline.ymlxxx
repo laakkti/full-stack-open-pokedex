@@ -28,12 +28,9 @@ jobs:
           command: npm run test:e2e
           start: npm run start-prod
           wait-on: http://localhost:5000
-<<<<<<< HEAD
   deploy:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
-=======
->>>>>>> 289113f99fccec57fde9248d086757ffbfa2072c

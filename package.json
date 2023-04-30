@@ -38,9 +38,15 @@
     "babel-jest": "^25.5.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
+<<<<<<< HEAD
     "cypress": "^12.9.0",
     "eslint": "^6.8.0",
     "eslint-plugin-cypress": "^2.13.2",
+=======
+    "cypress": "^12.11.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-cypress": "^2.13.3",
+>>>>>>> 289113f99fccec57fde9248d086757ffbfa2072c
     "eslint-plugin-jest": "^23.11.0",
     "eslint-plugin-react": "^7.19.0",
     "html-loader": "^1.1.0",
