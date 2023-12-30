@@ -4,10 +4,7 @@ module.exports = {
     "node": true,
     "es6": true,
     "jest/globals": true
-  },
-  globals: {
-    process: true,
-  },
+  }, 
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
