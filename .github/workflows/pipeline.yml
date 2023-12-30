@@ -31,6 +31,10 @@ jobs:
           command: npm run test:e2e
           start: npm run start-prod
           wait-on: http://localhost:5000
+      - name: Bump version and push tag
+        uses: anothrNick/github-tag-action@1.64.0
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}     
   
   a_test_job:
     runs-on: ubuntu-20.04
@@ -48,16 +52,7 @@ jobs:
         env:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
         run: echo "$COMMIT_MESSAGES"
-  
-  tag_release:
-      needs: [simple_deployment_pipeline]
-      runs-on: ubuntu-20.04
-      steps:
-        - name: Bump version and push tag
-          uses: anothrNick/github-tag-action@1.64.0
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            WITH_V: true
+    
   deploy:
       if: ${{ github.event_name == 'push' }}
       runs-on: ubuntu-latest
