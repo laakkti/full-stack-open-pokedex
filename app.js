@@ -10,7 +10,7 @@ app.use(express.static('dist'))
 app.get('/health', (req, res) => {
   //throw 'error...'
   // eslint-disable-next-line no-unreachable
-  res.send('okay')
+  res.send('ok')
 })
 
 app.get('/version', (req, res) => {

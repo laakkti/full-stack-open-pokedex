@@ -1,4 +1,4 @@
-# Full Stack open CI/CD xxx
+# Full Stack open CI/CD
 
 This repository is used for the CI/CD module of the Full stack open course
 
@@ -13,3 +13,8 @@ Start by running `npm install` inside the project folder
 `npm run eslint` to run eslint
 `npm run build` to make a production build
 `npm run start-prod` to run your production build
+
+
+flyctl ssh console -t fo1_jUfSEH3jGY_1k8nXhvyE3TXW2BtLvZSrZ5HbMaU3Oqo
+chmod +x /app/health_check.sh
+/app/health_check.sh
