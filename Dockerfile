@@ -18,7 +18,6 @@ RUN npm install && npm run build
 FROM debian:bullseye-slim
 
 RUN apt-get update; apt install -y curl
-#RUN chmod +x /app/health_check.sh
 
 
 LABEL fly_launch_runtime="nodejs"
@@ -29,5 +28,7 @@ COPY --from=builder /app /app
 WORKDIR /app
 ENV NODE_ENV production
 ENV PATH /usr/local/node/bin:$PATH
+
+RUN chmod +x /app/health_check.sh
 
 CMD [ "npm", "run", "start" ]
