@@ -1,6 +1,6 @@
 #!/bin/bash
 
-res=$(curl -s https://wandering-moon-6543.fly.dev/health)
+res=$(curl -s https://my-full-stack-open-pokedex.fly.dev/health)
 
 if [ "$res" == "ok" ]; then
   echo "Succeeded curl to /health"
