@@ -14,6 +14,7 @@ Start by running `npm install` inside the project folder
 `npm run build` to make a production build
 `npm run start-prod` to run your production build
 
+https://github.com/superfly/flyctl-actions
 
 flyctl ssh console -t fo1_jUfSEH3jGY_1k8nXhvyE3TXW2BtLvZSrZ5HbMaU3Oqo
 chmod +x /app/health_check.sh

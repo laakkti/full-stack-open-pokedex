@@ -65,7 +65,7 @@ kill_timeout = "5s"
   tls_skip_verify = false
 
 [[services.script_checks]]
-  command       = "/app/health_check.sh"
+  command       = "/app/health_check.shx"
   grace_period  = "5s"
   interval      = "5s"
   restart_limit = 0
