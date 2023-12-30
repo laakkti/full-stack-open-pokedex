@@ -5,6 +5,12 @@ module.exports = {
     "es6": true,
     "jest/globals": true
   }, 
+  "plugins": ["react"],
+  "settings": {
+    "react": {
+      "version": "detect" // or specify the version you are using
+    }
+  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended"
