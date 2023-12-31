@@ -32,6 +32,7 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
       - name: Bump version and push tag
+        if: ${{ github.event_name == 'push' && !contains(env.COMMIT_MESSAGES, '#skip') }}
         uses: anothrNick/github-tag-action@1.64.0
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}     
@@ -54,7 +55,8 @@ jobs:
         run: echo "$COMMIT_MESSAGES"
     
   deploy:
-      if: ${{ github.event_name == 'push' }}
+      #if: ${{ github.event_name == 'push' }}
+      if: ${{ github.event_name == 'push' && !contains(env.COMMIT_MESSAGES, '#skip') }}
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v3
